@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secret</title>
+
+  <style>
+    body{
+      margin:0;
+      font-family:sans-serif;
+      background:linear-gradient(135deg,#12001f,#2d004d,#4b0082);
+      overflow:hidden;
+      color:white;
+    }
+
+    #lock{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+    }
+
+    input{
+      padding:14px;
+      border:none;
+      border-radius:12px;
+      width:220px;
+      font-size:18px;
+      text-align:center;
+      outline:none;
+    }
+
+    button{
+      margin-top:15px;
+      padding:14px 28px;
+      border:none;
+      border-radius:12px;
+      background:#ff4d8d;
+      color:white;
+      font-size:18px;
+      cursor:pointer;
+    }
+
+    #content{
+      display:none;
+      text-align:center;
+      padding:20px;
+      animation:fadeIn 1s ease;
+    }
+
+    h1{
+      font-size:42px;
+      color:#ffb3d9;
+      text-shadow:0 0 20px #ff4d8d;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+      gap:12px;
+      margin-top:25px;
+    }
+
+    .gallery img{
+      width:100%;
+      border-radius:16px;
+      box-shadow:0 0 15px rgba(255,255,255,0.3);
+      transition:transform .3s;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.05);
+    }
+
+    .msg{
+      max-width:700px;
+      margin:30px auto;
+      line-height:1.8;
+      font-size:18px;
+      background:rgba(255,255,255,0.08);
+      padding:20px;
+      border-radius:18px;
+      backdrop-filter:blur(6px);
+    }
+
+    @keyframes fadeIn{
+      from{opacity:0; transform:translateY(20px);}
+      to{opacity:1; transform:translateY(0);}
+    }
+
+    .flower{
+      position:fixed;
+      top:-20px;
+      font-size:20px;
+      animation:fall linear infinite;
+      opacity:.8;
+    }
+
+    @keyframes fall{
+      to{
+        transform:translateY(110vh) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="lock">
+    <h2>🔒 A secret has been waiting for you...</h2>
+    <input type="password" id="pass" placeholder="Enter the secret word">
+    <button onclick="check()">Open</button>
+  </div>
+
+  <div id="content">
+    <h1>🎂 Happy Birthday, Sanu Kanxi 💜</h1>
+
+    <div class="msg">
+      From our childhood memories to today, every moment with you has become a beautiful part of my life.
+      You make my world brighter, calmer, and happier.
+      On your special day, I just want to say thank you for being you.
+      No matter where life takes us, you will always have a very special place in my heart. 💜
+      <br><br>
+      — Your Kanxa ❤️
+    </div>
+
+    <div class="gallery">
+      <img src="https://picsum.photos/300/400?random=1">
+      <img src="https://picsum.photos/300/400?random=2">
+      <img src="https://picsum.photos/300/400?random=3">
+      <img src="https://
